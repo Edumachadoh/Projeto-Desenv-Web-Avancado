@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Eduardo\\Desktop\\ProjetoGestaodeSoftware\\projeto-zizo\\Xablau.csproj": {}
+    "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancado\\projeto\\Xablau.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Eduardo\\Desktop\\ProjetoGestaodeSoftware\\projeto-zizo\\Xablau.csproj": {
+    "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancado\\projeto\\Xablau.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Eduardo\\Desktop\\ProjetoGestaodeSoftware\\projeto-zizo\\Xablau.csproj",
+        "projectUniqueName": "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancado\\projeto\\Xablau.csproj",
         "projectName": "Xablau",
-        "projectPath": "C:\\Users\\Eduardo\\Desktop\\ProjetoGestaodeSoftware\\projeto-zizo\\Xablau.csproj",
+        "projectPath": "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancado\\projeto\\Xablau.csproj",
         "packagesPath": "C:\\Users\\Eduardo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Eduardo\\Desktop\\ProjetoGestaodeSoftware\\projeto-zizo\\obj\\",
+        "outputPath": "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancado\\projeto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Eduardo\\AppData\\Roaming\\NuGet\\NuGet.Config"

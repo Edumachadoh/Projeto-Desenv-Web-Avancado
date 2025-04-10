@@ -83,3 +83,46 @@ C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\refint\Xablau.dll
 C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\Xablau.pdb
 C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\Xablau.genruntimeconfig.cache
 C:\Users\gus\UP\projeto-dbz-csharp\obj\Debug\net8.0\ref\Xablau.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\appsettings.Development.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\appsettings.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Xablau.exe
+C:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Xablau.deps.json
+C:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Xablau.runtimeconfig.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Xablau.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Xablau.pdb
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Humanizer.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Microsoft.OpenApi.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Mono.TextTemplating.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\MySqlConnector.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Pomelo.EntityFrameworkCore.MySql.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\bin\Debug\net8.0\System.CodeDom.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.csproj.AssemblyReference.cache
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.AssemblyInfoInputs.cache
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.AssemblyInfo.cs
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.csproj.CoreCompileInputs.cache
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.MvcApplicationPartsAssemblyInfo.cs
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.sourcelink.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets.build.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets.development.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets\msbuild.Xablau.Microsoft.AspNetCore.StaticWebAssets.props
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets\msbuild.build.Xablau.props
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Xablau.props
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Xablau.props
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\staticwebassets.pack.json
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\scopedcss\bundle\Xablau.styles.css
+C:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.csproj.Up2Date
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\refint\Xablau.dll
+c:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.pdb
+C:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\Xablau.genruntimeconfig.cache
+C:\Users\Eduardo\Desktop\ProjetoSoftwareVisual - avancado\projeto\obj\Debug\net8.0\ref\Xablau.dll
