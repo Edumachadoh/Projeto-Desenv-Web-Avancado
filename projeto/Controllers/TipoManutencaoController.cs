@@ -7,78 +7,78 @@ namespace Xablau.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PersonagemController : ControllerBase
+    public class TipoManutencaoController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
 
-        public PersonagemController(AppDbContext appDbContext)
+        public TipoManutencaoController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddPersonagem(Personagem personagem)
+        public async Task<IActionResult> AddTipoManutencao(TipoManutencao tipoManutencao)
         {
-            if (personagem == null) {
+            if (tipoManutencao == null) {
                 return BadRequest("Dados inválidos!");
             }
 
-            _appDbContext.XablauDB.Add(personagem);
+            _appDbContext.TipoManutencao.Add(tipoManutencao);
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagem);
+            return StatusCode(201, tipoManutencao);
         }
 
         [HttpGet]
-        public async Task<ActionResult <IEnumerable<Personagem>>> GetPersonagem()
+        public async Task<ActionResult <IEnumerable<TipoManutencao>>> GetTipoManutencao()
         {
-            var personagens = await _appDbContext.XablauDB.ToListAsync();
+            var tiposManutencao = await _appDbContext.TipoManutencao.ToListAsync();
 
-            return Ok(personagens);
+            return Ok(tiposManutencao);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Personagem>> GetPersonagem(int id)
+        public async Task<ActionResult<TipoManutencao>> GetTipoManutencao(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var tipoManutencao = await _appDbContext.TipoManutencao.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (tipoManutencao == null) {
+                return NotFound("Tipo de manutenção não encontrado!");
             }
 
-            return Ok(personagem);
+            return Ok(tipoManutencao);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
+        public async Task<IActionResult> UpdateTipoManutencao(int id, [FromBody] TipoManutencao tipoManutencaoAtualizado)
         {
-            var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+            var tipoManutencaoExistente = await _appDbContext.TipoManutencao.FindAsync(id);
 
-            if (personagemExistente == null) {
-                return NotFound("Personagem não encontrado!");
+            if (tipoManutencaoExistente == null) {
+                return NotFound("Tipo de manutenção não encontrado!");
             }
 
-            _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+            _appDbContext.Entry(tipoManutencaoExistente).CurrentValues.SetValues(tipoManutencaoAtualizado);
 
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagemAtualizado);
+            return StatusCode(201, tipoManutencaoAtualizado);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeletePersonagem(int id)
+        public async Task<ActionResult> DeleteTipoManutencao(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var tipoManutencao = await _appDbContext.TipoManutencao.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (tipoManutencao == null) {
+                return NotFound("Tipo de manutenção não encontrado!");
             }
 
-            _appDbContext.Remove(personagem);
+            _appDbContext.Remove(tipoManutencao);
 
             await _appDbContext.SaveChangesAsync();
 
-            return Ok("Personagem mandado para a glória!");
+            return Ok("Tipo de manutenção mandado para a glória!");
         }
     }
 }

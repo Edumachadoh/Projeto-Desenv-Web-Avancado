@@ -22,9 +22,9 @@ namespace Xablau.Models
         [Required]
         public string Localização { get; set; }
         [Required]
-        public DateTime DataInicio { get; set; }
+        public string DataInicio { get; set; }
         [Required]
-        public DateTime DataFim { get; set; }
+        public string DataFim { get; set; }
         [Required]
         public double CustoPrevisto { get; set; }
         [Required]

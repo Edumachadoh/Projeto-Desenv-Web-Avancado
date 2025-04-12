@@ -7,78 +7,78 @@ namespace Xablau.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PersonagemController : ControllerBase
+    public class MaterialController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
 
-        public PersonagemController(AppDbContext appDbContext)
+        public MaterialController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddPersonagem(Personagem personagem)
+        public async Task<IActionResult> AddMaterial(Material material)
         {
-            if (personagem == null) {
+            if (material == null) {
                 return BadRequest("Dados inválidos!");
             }
 
-            _appDbContext.XablauDB.Add(personagem);
+            _appDbContext.Material.Add(material);
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagem);
+            return StatusCode(201, material);
         }
 
         [HttpGet]
-        public async Task<ActionResult <IEnumerable<Personagem>>> GetPersonagem()
+        public async Task<ActionResult <IEnumerable<Material>>> GetMaterial()
         {
-            var personagens = await _appDbContext.XablauDB.ToListAsync();
+            var materiais = await _appDbContext.Material.ToListAsync();
 
-            return Ok(personagens);
+            return Ok(materiais);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Personagem>> GetPersonagem(int id)
+        public async Task<ActionResult<Material>> GetMaterial(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var material = await _appDbContext.Material.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (material == null) {
+                return NotFound("Material não encontrado!");
             }
 
-            return Ok(personagem);
+            return Ok(material);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
+        public async Task<IActionResult> UpdateMaterial(int id, [FromBody] Material materialAtualizado)
         {
-            var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+            var materialExistente = await _appDbContext.Material.FindAsync(id);
 
-            if (personagemExistente == null) {
-                return NotFound("Personagem não encontrado!");
+            if (materialExistente == null) {
+                return NotFound("Material não encontrado!");
             }
 
-            _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+            _appDbContext.Entry(materialExistente).CurrentValues.SetValues(materialAtualizado);
 
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagemAtualizado);
+            return StatusCode(201, materialAtualizado);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeletePersonagem(int id)
+        public async Task<ActionResult> DeleteMaterial(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var material = await _appDbContext.Material.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (material == null) {
+                return NotFound("Material não encontrado!");
             }
 
-            _appDbContext.Remove(personagem);
+            _appDbContext.Remove(material);
 
             await _appDbContext.SaveChangesAsync();
 
-            return Ok("Personagem mandado para a glória!");
+            return Ok("Material mandado para a glória!");
         }
     }
 }

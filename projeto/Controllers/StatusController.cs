@@ -7,78 +7,78 @@ namespace Xablau.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PersonagemController : ControllerBase
+    public class StatusController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
 
-        public PersonagemController(AppDbContext appDbContext)
+        public StatusController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddPersonagem(Personagem personagem)
+        public async Task<IActionResult> AddStatus(Status status)
         {
-            if (personagem == null) {
+            if (status == null) {
                 return BadRequest("Dados inválidos!");
             }
 
-            _appDbContext.XablauDB.Add(personagem);
+            _appDbContext.Status.Add(status);
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagem);
+            return StatusCode(201, status);
         }
 
         [HttpGet]
-        public async Task<ActionResult <IEnumerable<Personagem>>> GetPersonagem()
+        public async Task<ActionResult <IEnumerable<Status>>> GetStatus()
         {
-            var personagens = await _appDbContext.XablauDB.ToListAsync();
+            var statuses = await _appDbContext.Status.ToListAsync();
 
-            return Ok(personagens);
+            return Ok(statuses);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Personagem>> GetPersonagem(int id)
+        public async Task<ActionResult<Status>> GetStatus(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var status = await _appDbContext.Status.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (status == null) {
+                return NotFound("Status não encontrado!");
             }
 
-            return Ok(personagem);
+            return Ok(status);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
+        public async Task<IActionResult> UpdateStatus(int id, [FromBody] Status statusAtualizado)
         {
-            var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+            var statusExistente = await _appDbContext.Status.FindAsync(id);
 
-            if (personagemExistente == null) {
-                return NotFound("Personagem não encontrado!");
+            if (statusExistente == null) {
+                return NotFound("Status não encontrado!");
             }
 
-            _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+            _appDbContext.Entry(statusExistente).CurrentValues.SetValues(statusAtualizado);
 
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagemAtualizado);
+            return StatusCode(201, statusAtualizado);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeletePersonagem(int id)
+        public async Task<ActionResult> DeleteStatus(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var status = await _appDbContext.Status.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (status == null) {
+                return NotFound("Status não encontrado!");
             }
 
-            _appDbContext.Remove(personagem);
+            _appDbContext.Remove(status);
 
             await _appDbContext.SaveChangesAsync();
 
-            return Ok("Personagem mandado para a glória!");
+            return Ok("Status mandado para a glória!");
         }
     }
 }

@@ -11,7 +11,7 @@ namespace Xablau.Models
         [Required]
         public string Cpf { get; set; }
         [Required]
-        public DateTime dataNascimento { get; set; }
+        public string dataNascimento { get; set; }
         [Required]
         public string RegistroCREA { get; set; }
         [Required]

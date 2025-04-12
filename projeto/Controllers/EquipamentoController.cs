@@ -7,78 +7,78 @@ namespace Xablau.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class PersonagemController : ControllerBase
+    public class EquipamentoController : ControllerBase
     {
         private readonly AppDbContext _appDbContext;
 
-        public PersonagemController(AppDbContext appDbContext)
+        public EquipamentoController(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddPersonagem(Personagem personagem)
+        public async Task<IActionResult> AddEquipamento(Equipamento equipamento)
         {
-            if (personagem == null) {
+            if (equipamento == null) {
                 return BadRequest("Dados inválidos!");
             }
 
-            _appDbContext.XablauDB.Add(personagem);
+            _appDbContext.Equipamento.Add(equipamento);
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagem);
+            return StatusCode(201, equipamento);
         }
 
         [HttpGet]
-        public async Task<ActionResult <IEnumerable<Personagem>>> GetPersonagem()
+        public async Task<ActionResult <IEnumerable<Equipamento>>> GetEquipamento()
         {
-            var personagens = await _appDbContext.XablauDB.ToListAsync();
+            var equipamentos = await _appDbContext.Equipamento.ToListAsync();
 
-            return Ok(personagens);
+            return Ok(equipamentos);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Personagem>> GetPersonagem(int id)
+        public async Task<ActionResult<Equipamento>> GetEquipamento(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var equipamento = await _appDbContext.Equipamento.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (equipamento == null) {
+                return NotFound("Equipamento não encontrado!");
             }
 
-            return Ok(personagem);
+            return Ok(equipamento);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
+        public async Task<IActionResult> UpdateEquipamento(int id, [FromBody] Equipamento equipamentoAtualizado)
         {
-            var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+            var equipamentoExistente = await _appDbContext.Equipamento.FindAsync(id);
 
-            if (personagemExistente == null) {
-                return NotFound("Personagem não encontrado!");
+            if (equipamentoExistente == null) {
+                return NotFound("Equipamento não encontrado!");
             }
 
-            _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+            _appDbContext.Entry(equipamentoExistente).CurrentValues.SetValues(equipamentoAtualizado);
 
             await _appDbContext.SaveChangesAsync();
 
-            return StatusCode(201, personagemAtualizado);
+            return StatusCode(201, equipamentoAtualizado);
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DeletePersonagem(int id)
+        public async Task<ActionResult> DeleteEquipamento(int id)
         {
-            var personagem = await _appDbContext.XablauDB.FindAsync(id);
+            var equipamento = await _appDbContext.Equipamento.FindAsync(id);
 
-            if (personagem == null) {
-                return NotFound("Personagem não encontrado!");
+            if (equipamento == null) {
+                return NotFound("Equipamento não encontrado!");
             }
 
-            _appDbContext.Remove(personagem);
+            _appDbContext.Remove(equipamento);
 
             await _appDbContext.SaveChangesAsync();
 
-            return Ok("Personagem mandado para a glória!");
+            return Ok("Equipamento mandado para a glória!");
         }
     }
 }
