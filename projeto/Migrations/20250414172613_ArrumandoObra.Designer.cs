@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Xablau.Data;
 
@@ -10,9 +11,11 @@ using Xablau.Data;
 namespace Xablau.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250414172613_ArrumandoObra")]
+    partial class ArrumandoObra
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -227,21 +230,6 @@ namespace Xablau.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("TipoManutencao");
-                });
-
-            modelBuilder.Entity("Xablau.Models.Trilho", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nome")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Trilho");
                 });
 
             modelBuilder.Entity("Xablau.Models.Usuario", b =>

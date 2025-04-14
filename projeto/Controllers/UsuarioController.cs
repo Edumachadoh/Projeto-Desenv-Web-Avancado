@@ -1,84 +1,84 @@
-// using Microsoft.AspNetCore.Mvc;
-// using Microsoft.EntityFrameworkCore;
-// using Xablau.Data;
-// using Xablau.Models;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Xablau.Data;
+using Xablau.Models;
 
-// namespace Xablau.Controllers
-// {
-//     [ApiController]
-//     [Route("api/[controller]")]
-//     public class PersonagemController : ControllerBase
-//     {
-//         private readonly AppDbContext _appDbContext;
+namespace Xablau.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class UsuarioController : ControllerBase
+    {
+        private readonly AppDbContext _appDbContext;
 
-//         public PersonagemController(AppDbContext appDbContext)
-//         {
-//             _appDbContext = appDbContext;
-//         }
+        public UsuarioController(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
 
-//         [HttpPost]
-//         public async Task<IActionResult> AddPersonagem(Personagem personagem)
-//         {
-//             if (personagem == null) {
-//                 return BadRequest("Dados inválidos!");
-//             }
+        [HttpPost]
+        public async Task<IActionResult> AddUsuario(Usuario usuario)
+        {
+            if (usuario == null) {
+                return BadRequest("Dados inválidos!");
+            }
 
-//             _appDbContext.XablauDB.Add(personagem);
-//             await _appDbContext.SaveChangesAsync();
+            _appDbContext.Usuario.Add(usuario);
+            await _appDbContext.SaveChangesAsync();
 
-//             return StatusCode(201, personagem);
-//         }
+            return StatusCode(201, usuario);
+        }
 
-//         [HttpGet]
-//         public async Task<ActionResult <IEnumerable<Personagem>>> GetPersonagem()
-//         {
-//             var personagens = await _appDbContext.XablauDB.ToListAsync();
+        [HttpGet]
+        public async Task<ActionResult <IEnumerable<Usuario>>> GetUsuario()
+        {
+            var usuarios = await _appDbContext.Usuario.ToListAsync();
 
-//             return Ok(personagens);
-//         }
+            return Ok(usuarios);
+        }
 
-//         [HttpGet("{id}")]
-//         public async Task<ActionResult<Personagem>> GetPersonagem(int id)
-//         {
-//             var personagem = await _appDbContext.XablauDB.FindAsync(id);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Usuario>> GetUsuario(int id)
+        {
+            var usuario = await _appDbContext.Usuario.FindAsync(id);
 
-//             if (personagem == null) {
-//                 return NotFound("Personagem não encontrado!");
-//             }
+            if (usuario == null) {
+                return NotFound("Usuario não encontrado!");
+            }
 
-//             return Ok(personagem);
-//         }
+            return Ok(usuario);
+        }
 
-//         [HttpPut("{id}")]
-//         public async Task<IActionResult> UpdatePersonagem(int id, [FromBody] Personagem personagemAtualizado)
-//         {
-//             var personagemExistente = await _appDbContext.XablauDB.FindAsync(id);
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUsuario(int id, [FromBody] Usuario usuarioAtualizado)
+        {
+            var usuarioExistente = await _appDbContext.Usuario.FindAsync(id);
 
-//             if (personagemExistente == null) {
-//                 return NotFound("Personagem não encontrado!");
-//             }
+            if (usuarioExistente == null) {
+                return NotFound("Usuario não encontrado!");
+            }
 
-//             _appDbContext.Entry(personagemExistente).CurrentValues.SetValues(personagemAtualizado);
+            _appDbContext.Entry(usuarioExistente).CurrentValues.SetValues(usuarioAtualizado);
 
-//             await _appDbContext.SaveChangesAsync();
+            await _appDbContext.SaveChangesAsync();
 
-//             return StatusCode(201, personagemAtualizado);
-//         }
+            return StatusCode(201, usuarioAtualizado);
+        }
 
-//         [HttpDelete("{id}")]
-//         public async Task<ActionResult> DeletePersonagem(int id)
-//         {
-//             var personagem = await _appDbContext.XablauDB.FindAsync(id);
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteUsuario(int id)
+        {
+            var usuario = await _appDbContext.Usuario.FindAsync(id);
 
-//             if (personagem == null) {
-//                 return NotFound("Personagem não encontrado!");
-//             }
+            if (usuario == null) {
+                return NotFound("Usuario não encontrado!");
+            }
 
-//             _appDbContext.Remove(personagem);
+            _appDbContext.Remove(usuario);
 
-//             await _appDbContext.SaveChangesAsync();
+            await _appDbContext.SaveChangesAsync();
 
-//             return Ok("Personagem mandado para a glória!");
-//         }
-//     }
-// }
+            return Ok("Usuario mandado para a glória!");
+        }
+    }
+}

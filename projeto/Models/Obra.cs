@@ -33,5 +33,7 @@ namespace Xablau.Models
         public string Complexidade { get; set; }
         [Required]
         public string ImpactoAmbiental { get; set; }
+        [Required]
+        public string Descricao { get; set; }
     }
 }

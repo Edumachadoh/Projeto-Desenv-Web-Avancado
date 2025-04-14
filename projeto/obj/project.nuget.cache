@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4gz2S73ql38=",
+  "dgSpecHash": "iHmt2SZgIG8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancado\\projeto\\Xablau.csproj",
+  "projectFilePath": "C:\\Users\\Eduardo\\Desktop\\ProjetoSoftwareVisual - avancadoAntigo\\projeto\\Xablau.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eduardo\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Eduardo\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.7\\microsoft.entityframeworkcore.7.0.7.nupkg.sha512",

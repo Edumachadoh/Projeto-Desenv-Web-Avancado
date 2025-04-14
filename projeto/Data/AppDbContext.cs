@@ -18,5 +18,6 @@ namespace Xablau.Data
         public DbSet<Status> Status { get; set; }
         public DbSet<TipoManutencao> TipoManutencao { get; set; }
         public DbSet<Usuario> Usuario { get; set; }
+        public DbSet<Trilho> Trilho { get; set; }
     }
 }
