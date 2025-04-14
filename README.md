@@ -1,20 +1,17 @@
 # 📚 Nome do Projeto
 
-> *Substitua este título pelo nome do seu projeto.*
+> Edenz Construção de Malha Ferroviária
 
 ## 🧾 Descrição
 
-Descreva aqui de forma clara e objetiva o **propósito da aplicação**.  
-Explique o **enredo ou contexto** onde essa API se aplica. Por exemplo:
-
-> "Esta API simula o controle de estoque e pedidos de um pequeno supermercado local. Permite cadastrar produtos, fornecedores e registrar pedidos de compra."
+> Nossa API serve para controlar obras relacionadas a construção e manutenção de trilhos de trem. Ela permite um CRUD (cadastro, edição, deleção e busca) de obras, engenheiros, usuários, materiais, equipamentos e manutenções. Esse sistema serve principalmente para gestores e pessoas que estão administrando a obra e querem ter controle sobre o andamento da mesma. 
 
 ---
 
 ## 👥 Integrantes da Dupla
 
-- Nome Completo do Aluno 1 - [usuario Github](https://github.com/seu-usuario)
-- Nome Completo do Aluno 2 - [usuario Github](https://github.com/seu-usuario)
+- Nome Completo do Aluno 1 - [Edumachadoh](https://github.com/Edumachadoh)
+- Nome Completo do Aluno 2 - [EnzoSottoRib](https://github.com/EnzoSottoRib)
 
 ---
 
@@ -36,18 +33,24 @@ Explique o **enredo ou contexto** onde essa API se aplica. Por exemplo:
 - [.NET SDK 8.0+](https://dotnet.microsoft.com/en-us/download)
 - MySQL instalado
 - Git instalado
+ - Instalar as extensões essenciais:
+     - C# Dev Kit
 
 ### Passos
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/usuario/repositorio
+git clone https://github.com/Edumachadoh/Projeto-Desenv-Web-Avancado.git
 
 # 2. Acesse a pasta do projeto
-cd nome-da-pasta
+cd Projeto-Desenv-Web-Avancado
 
 # 3. Restaure os pacotes
 dotnet restore
 
 # 4. Execute a aplicação
-dotnet run
+dotnet run 
+ou
+a. Selecione o arquivo "Program.cs"
+b. Selecione o botão com sinal de play na parte superior direita
+c. Selecione "Executar projeto associado a esse arquivo"
