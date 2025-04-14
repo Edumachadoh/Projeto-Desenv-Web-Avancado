@@ -50,7 +50,6 @@ dotnet restore
 
 # 4. Execute a aplicação
 dotnet run 
-ou
-a. Selecione o arquivo "Program.cs"
-b. Selecione o botão com sinal de play na parte superior direita
-c. Selecione "Executar projeto associado a esse arquivo"
+Selecione o arquivo "Program.cs"
+Selecione o botão com sinal de play na parte superior direita
+Selecione "Executar projeto associado a esse arquivo"
